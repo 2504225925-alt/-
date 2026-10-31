@@ -1,0 +1,244 @@
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #edf5fb;
+  color: #111827;
+}
+
+body.login-body {
+  min-height: 100vh;
+  background: #edf5fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+.login-shell {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 0 0 0;
+  background: #edf5fb;
+}
+
+.login-page {
+  width: 100%;
+  min-height: calc(100vh - 28px);
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.login-copy-panel {
+  max-width: 1200px;
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  background: linear-gradient(135deg, #81c8ff, #1d8df2);
+  color: #0a3d78;
+  box-shadow: 0 10px 20px rgba(29, 141, 242, 0.16);
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2433;
+}
+
+.brand-sub {
+  margin-top: 4px;
+  font-size: 0.74rem;
+  color: rgba(23, 35, 52, 0.7);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0d3b75;
+}
+
+.login-copy-panel h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 4.4vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+  color: #0f172a;
+  font-weight: 800;
+  max-width: 980px;
+}
+
+.login-copy-panel p {
+  margin: 18px 0 0;
+  font-size: 1.12rem;
+  line-height: 1.9;
+  color: rgba(17, 24, 39, 0.68);
+  max-width: 940px;
+}
+
+.login-card {
+  margin-top: 22px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 980px;
+}
+
+.login-header {
+  margin-bottom: 18px;
+}
+
+.login-header h2 {
+  margin: 0 0 10px;
+  font-size: 2.15rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #0f172a;
+}
+
+.login-header span {
+  display: inline-block;
+  color: rgba(17, 24, 39, 0.7);
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 860px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 16px;
+  color: rgba(17, 24, 39, 0.82);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.field span {
+  display: inline-block;
+  min-width: 80px;
+  color: rgba(17, 24, 39, 0.82);
+}
+
+.field input {
+  width: 100%;
+  max-width: 500px;
+  height: 42px;
+  border: 1px solid rgba(17, 24, 39, 0.22);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 1.05rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  border-color: rgba(29, 141, 242, 0.5);
+  box-shadow: 0 0 0 3px rgba(29, 141, 242, 0.08);
+}
+
+.login-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.remember-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: rgba(17, 24, 39, 0.8);
+}
+
+.remember-me input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1d8df2;
+}
+
+.login-meta a {
+  color: #1d8df2;
+  font-weight: 500;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1d8df2, #4ca4ff);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(29, 141, 242, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(29, 141, 242, 0.24);
+}
+
+.login-btn {
+  width: 150px;
+  height: 54px;
+  margin-top: 8px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 24px;
+  }
+
+  .field {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .field span {
+    min-width: 0;
+  }
+
+  .field input {
+    max-width: 100%;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
