@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智慧养老服务平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <button class="nav-item active">
+            <span class="nav-icon">⌂</span>
+            <span>首页</span>
+          </button>
+          <button class="nav-item">
+            <span class="nav-icon">◎</span>
+            <span>老人档案</span>
+          </button>
+          <button class="nav-item">
+            <span class="nav-icon">▣</span>
+            <span>健康监测</span>
+          </button>
+          <button class="nav-item">
+            <span class="nav-icon">⟡</span>
+            <span>照护服务</span>
+          </button>
+          <button class="nav-item">
+            <span class="nav-icon">⚑</span>
+            <span>安全应急</span>
+          </button>
+        </nav>
+
+        <div class="mini-panel">
+          <div class="mini-panel-header">今日重点</div>
+          <div class="mini-metric">
+            <strong>26</strong>
+            <span>待办事项</span>
+          </div>
+          <div class="mini-metric warn">
+            <strong>3</strong>
+            <span>高风险提醒</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="search-box">
+            <span>⌕</span>
+            <input type="text" value="搜索老人/服务工单/设备" aria-label="search" />
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-btn">◌</button>
+            <button class="icon-btn">🔔</button>
+            <div class="user-card">
+              <div class="avatar">周</div>
+              <div>
+                <div class="user-name">周主任</div>
+                <div class="user-role">运营管理</div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">智慧医疗 × 智慧养老</div>
+            <h1>让老年生活更健康、更安心、更有温度</h1>
+            <p>
+              连接健康档案、设备监测、服务调度与家庭关怀，构建全场景智慧养老服务闭环。
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn">发起服务</button>
+              <button class="ghost-btn">查看报告</button>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-card main-stat">
+              <div class="stat-header">
+                <span>今日健康指数</span>
+                <span class="tag success">优</span>
+              </div>
+              <div class="big-score">92.4</div>
+              <div class="trend-line">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="visual-card small-card subtle">
+              <div class="mini-label">夜间防跌</div>
+              <div class="mini-value">正常</div>
+            </div>
+            <div class="visual-card small-card accent">
+              <div class="mini-label">呼吸监测</div>
+              <div class="mini-value">18次/分</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">服务对象</div>
+            <div class="stat-value">12,840</div>
+            <div class="stat-footer"><span class="up">▲ 8.2%</span> 本月增长</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">健康评估</div>
+            <div class="stat-value">96.8%</div>
+            <div class="stat-footer"><span class="up">▲ 1.9%</span> 维持稳定</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">异常告警</div>
+            <div class="stat-value">236</div>
+            <div class="stat-footer"><span class="down">▼ 6.3%</span> 低于上周</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">满意度</div>
+            <div class="stat-value">4.9/5</div>
+            <div class="stat-footer"><span class="up">▲ 0.4</span> 用户反馈提升</div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="card large-card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">健康监测</div>
+                <div class="card-subtitle">近7日趋势</div>
+              </div>
+              <button class="filter-btn active">日</button>
+              <button class="filter-btn">周</button>
+              <button class="filter-btn">月</button>
+            </div>
+
+            <div class="chart" aria-label="health chart">
+              <div class="bar-group">
+                <span class="bar b1" style="height: 30%"></span>
+                <span class="bar b2" style="height: 50%"></span>
+                <span class="bar b3" style="height: 60%"></span>
+                <span class="bar b4" style="height: 75%"></span>
+                <span class="bar b5" style="height: 72%"></span>
+                <span class="bar b6" style="height: 90%"></span>
+                <span class="bar b7" style="height: 98%"></span>
+              </div>
+              <div class="chart-labels">
+                <span>周一</span>
+                <span>周二</span>
+                <span>周三</span>
+                <span>周四</span>
+                <span>周五</span>
+                <span>周六</span>
+                <span>周日</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card side-card">
+            <div class="card-header compact">
+              <div class="card-title">老人风险分层</div>
+              <button class="badge neutral">查看全部</button>
+            </div>
+
+            <div class="risk-list">
+              <div class="risk-item">
+                <div>
+                  <div class="person-name">王阿姨</div>
+                  <div class="person-meta">高血压 / 失眠</div>
+                </div>
+                <span class="risk-level high">高</span>
+              </div>
+              <div class="risk-item">
+                <div>
+                  <div class="person-name">李先生</div>
+                  <div class="person-meta">慢性病管理</div>
+                </div>
+                <span class="risk-level medium">中</span>
+              </div>
+              <div class="risk-item">
+                <div>
+                  <div class="person-name">赵叔叔</div>
+                  <div class="person-meta">跌倒风险评估</div>
+                </div>
+                <span class="risk-level low">低</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="card table-card">
+            <div class="card-header compact">
+              <div class="card-title">服务工单</div>
+              <button class="badge accent">今日 48 单</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>对象</th>
+                  <th>服务类型</th>
+                  <th>时间</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>张伯伯</td>
+                  <td>健康体检</td>
+                  <td>09:30</td>
+                  <td><span class="status ok">已完成</span></td>
+                </tr>
+                <tr>
+                  <td>刘奶奶</td>
+                  <td>送餐照护</td>
+                  <td>11:00</td>
+                  <td><span class="status processing">处理中</span></td>
+                </tr>
+                <tr>
+                  <td>陈大爷</td>
+                  <td>门禁提醒</td>
+                  <td>14:15</td>
+                  <td><span class="status pending">待跟进</span></td>
+                </tr>
+                <tr>
+                  <td>吴阿姨</td>
+                  <td>康复陪伴</td>
+                  <td>16:40</td>
+                  <td><span class="status ok">已完成</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card device-card">
+            <div class="card-header compact">
+              <div class="card-title">设备状态</div>
+              <button class="badge neutral">在线 97%</button>
+            </div>
+
+            <div class="device-list">
+              <div class="device-item">
+                <div class="device-meta">
+                  <span class="device-dot green"></span>
+                  <span>血压计</span>
+                </div>
+                <span>正常</span>
+              </div>
+              <div class="device-item">
+                <div class="device-meta">
+                  <span class="device-dot orange"></span>
+                  <span>跌倒检测器</span>
+                </div>
+                <span>校准中</span>
+              </div>
+              <div class="device-item">
+                <div class="device-meta">
+                  <span class="device-dot green"></span>
+                  <span>环境监测</span>
+                </div>
+                <span>正常</span>
+              </div>
+              <div class="device-item">
+                <div class="device-meta">
+                  <span class="device-dot red"></span>
+                  <span>手环报警</span>
+                </div>
+                <span>需处理</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
