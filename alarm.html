@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>报警中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item active" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">报警中心</div>
+              <h2 class="page-title">预警处理</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">一键处理</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">总告警</div>
+            <div class="stat-value">27</div>
+            <div class="stat-footer"><span class="down">▼ 4</span> 较上周降低</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">严重</div>
+            <div class="stat-value">5</div>
+            <div class="stat-footer"><span class="up">▲ 1</span> 需重点关注</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">处理中</div>
+            <div class="stat-value">11</div>
+            <div class="stat-footer"><span class="up">▲ 2</span> 响应中</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">已闭环</div>
+            <div class="stat-value">18</div>
+            <div class="stat-footer"><span class="up">▲ 7</span> 处理效率提升</div>
+          </article>
+        </section>
+
+        <section class="detail-grid lower-grid">
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>最新告警</h3>
+              <span class="chip chip-orange">待处置</span>
+            </div>
+            <ul class="task-list">
+              <li>高血压异常：李先生 11:20，收缩压 165mmHg</li>
+              <li>跌倒检测：三楼走廊，设备触发提醒</li>
+              <li>环境超标：北区二号楼温度 31℃</li>
+            </ul>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>响应流程</h3>
+              <span class="chip chip-blue">4步</span>
+            </div>
+            <div class="timeline">
+              <div><span>01</span><strong>识别</strong></div>
+              <div><span>02</span><strong>确认</strong></div>
+              <div><span>03</span><strong>处置</strong></div>
+              <div><span>04</span><strong>闭环</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-card table-panel">
+          <div class="panel-head">
+            <h3>告警记录</h3>
+            <button class="badge neutral">全部</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>告警时间</th>
+                <th>对象</th>
+                <th>类型</th>
+                <th>级别</th>
+                <th>状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:12</td>
+                <td>王阿姨</td>
+                <td>心率异常</td>
+                <td><span class="status pending">中</span></td>
+                <td><span class="status processing">处理中</span></td>
+              </tr>
+              <tr>
+                <td>09:42</td>
+                <td>赵叔叔</td>
+                <td>跌倒检测</td>
+                <td><span class="status pending">高</span></td>
+                <td><span class="status pending">待跟进</span></td>
+              </tr>
+              <tr>
+                <td>10:10</td>
+                <td>南区环境</td>
+                <td>温度过高</td>
+                <td><span class="status ok">低</span></td>
+                <td><span class="status ok">已处理</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>老人档案管理</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item active" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">老人档案</div>
+              <h2 class="page-title">档案管理中心</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">新增档案</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">在住老人</div>
+            <div class="stat-value">3,280</div>
+            <div class="stat-footer"><span class="up">▲ 4.5%</span> 较上月提升</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">高风险人数</div>
+            <div class="stat-value">118</div>
+            <div class="stat-footer"><span class="down">▼ 2.1%</span> 已持续改善</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">健康评估</div>
+            <div class="stat-value">92.4%</div>
+            <div class="stat-footer"><span class="up">▲ 3.6%</span> 报告完成率</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">服务满意度</div>
+            <div class="stat-value">4.8/5</div>
+            <div class="stat-footer"><span class="up">▲ 0.2</span> 用户反馈好评</div>
+          </article>
+        </section>
+
+        <section class="detail-grid">
+          <div class="panel-card large-panel">
+            <div class="panel-head">
+              <h3>老人基础信息</h3>
+              <span class="chip chip-blue">正常</span>
+            </div>
+
+            <div class="profile-box">
+              <div class="profile-avatar">王</div>
+              <div class="profile-meta">
+                <h4>王阿姨</h4>
+                <p>67岁 · 女 · 居住楼 3-12</p>
+              </div>
+            </div>
+
+            <div class="info-grid">
+              <div><label>护理等级</label><strong>二级护理</strong></div>
+              <div><label>血型</label><strong>A型</strong></div>
+              <div><label>慢病情况</label><strong>高血压、失眠</strong></div>
+              <div><label>联系人</label><strong>王子健</strong></div>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>健康评估</h3>
+              <span class="chip chip-green">优</span>
+            </div>
+
+            <div class="score-ring">
+              <div class="ring-inner">92</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-grid lower-grid">
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>关怀计划</h3>
+              <span class="chip chip-orange">3项待办</span>
+            </div>
+
+            <ul class="task-list">
+              <li>每日血压监测</li>
+              <li>晚间康复训练</li>
+              <li>陪同散步 20 分钟</li>
+            </ul>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>服务记录</h3>
+              <span class="chip chip-blue">本月 12 次</span>
+            </div>
+
+            <div class="timeline">
+              <div><span>09/08</span><strong>日常照护</strong></div>
+              <div><span>09/14</span><strong>健康体检</strong></div>
+              <div><span>09/21</span><strong>康复陪伴</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-card table-panel">
+          <div class="panel-head">
+            <h3>老人列表</h3>
+            <button class="badge neutral">全部</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>护理等级</th>
+                <th>健康状态</th>
+                <th>最近服务</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>王阿姨</td>
+                <td>67</td>
+                <td>二级</td>
+                <td><span class="status ok">正常</span></td>
+                <td>今天 09:10</td>
+              </tr>
+              <tr>
+                <td>李先生</td>
+                <td>74</td>
+                <td>三级</td>
+                <td><span class="status processing">观察</span></td>
+                <td>今天 11:25</td>
+              </tr>
+              <tr>
+                <td>赵叔叔</td>
+                <td>81</td>
+                <td>一级</td>
+                <td><span class="status pending">关注</span></td>
+                <td>昨天 17:30</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

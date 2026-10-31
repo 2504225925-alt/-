@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>健康监测中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item active" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">健康监测</div>
+              <h2 class="page-title">数据中心</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">导出报告</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">平均心率</div>
+            <div class="stat-value">72</div>
+            <div class="stat-footer"><span class="up">▲ 1.3%</span> 正常区间</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">血压均值</div>
+            <div class="stat-value">118/76</div>
+            <div class="stat-footer"><span class="up">▲ 0.8%</span> 稳定下降</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">睡眠时长</div>
+            <div class="stat-value">7.6h</div>
+            <div class="stat-footer"><span class="up">▲ 0.5h</span> 质量提升</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">异常告警</div>
+            <div class="stat-value">14</div>
+            <div class="stat-footer"><span class="down">▼ 3</span> 本周同比下降</div>
+          </article>
+        </section>
+
+        <section class="detail-grid">
+          <div class="panel-card large-panel">
+            <div class="panel-head">
+              <h3>近7日趋势</h3>
+              <div class="filter-group">
+                <button class="filter-btn active">日</button>
+                <button class="filter-btn">周</button>
+                <button class="filter-btn">月</button>
+              </div>
+            </div>
+
+            <div class="chart line-chart">
+              <svg viewBox="0 0 680 200" preserveAspectRatio="none" aria-label="trend chart">
+                <path d="M 0 170 C 70 150, 110 120, 160 140 S 260 95, 320 110 S 420 60, 480 90 S 590 25, 680 40 L 680 200 L 0 200 Z" fill="rgba(29,141,242,0.12)"/>
+                <path d="M 0 170 C 70 150, 110 120, 160 140 S 260 95, 320 110 S 420 60, 480 90 S 590 25, 680 40" fill="none" stroke="#1d8df2" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>重点监测</h3>
+              <span class="chip chip-green">稳定</span>
+            </div>
+            <div class="metric-stack">
+              <div class="metric-item">
+                <span>呼吸率</span>
+                <strong>18次/分</strong>
+              </div>
+              <div class="metric-item">
+                <span>体温</span>
+                <strong>36.6°C</strong>
+              </div>
+              <div class="metric-item">
+                <span>血氧</span>
+                <strong>98%</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-grid lower-grid">
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>异常事件</h3>
+              <span class="chip chip-orange">2条待处理</span>
+            </div>
+            <ul class="task-list">
+              <li>8:30 血压略高，已提醒家属</li>
+              <li>夜间睡眠中断 2 次，已观察</li>
+            </ul>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>设备在线率</h3>
+              <span class="chip chip-blue">97.2%</span>
+            </div>
+            <div class="progress-block">
+              <div class="progress-label"><span>健康手环</span><strong>96%</strong></div>
+              <div class="progress"><span style="width:96%"></span></div>
+              <div class="progress-label"><span>血压计</span><strong>98%</strong></div>
+              <div class="progress"><span style="width:98%"></span></div>
+              <div class="progress-label"><span>跌倒检测器</span><strong>94%</strong></div>
+              <div class="progress"><span style="width:94%"></span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

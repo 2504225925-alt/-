@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设备管理中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item active" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">设备管理</div>
+              <h2 class="page-title">智能设备中心</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">设备巡检</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">设备总数</div>
+            <div class="stat-value">1,296</div>
+            <div class="stat-footer"><span class="up">▲ 24</span> 本月新增</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">在线数</div>
+            <div class="stat-value">1,232</div>
+            <div class="stat-footer"><span class="up">▲ 3.4%</span> 运营稳定</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">离线设备</div>
+            <div class="stat-value">18</div>
+            <div class="stat-footer"><span class="down">▼ 2</span> 已处理</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">故障率</div>
+            <div class="stat-value">1.8%</div>
+            <div class="stat-footer"><span class="up">▲ 0.3%</span> 正在优化</div>
+          </article>
+        </section>
+
+        <section class="detail-grid lower-grid">
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>设备状态</h3>
+              <span class="chip chip-blue">在线 97%</span>
+            </div>
+            <div class="device-list">
+              <div class="device-item"><div class="device-meta"><span class="device-dot green"></span><span>血压计</span></div><span>正常</span></div>
+              <div class="device-item"><div class="device-meta"><span class="device-dot orange"></span><span>跌倒检测器</span></div><span>校准中</span></div>
+              <div class="device-item"><div class="device-meta"><span class="device-dot green"></span><span>环境监测</span></div><span>正常</span></div>
+              <div class="device-item"><div class="device-meta"><span class="device-dot red"></span><span>手环报警</span></div><span>需处理</span></div>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>巡检任务</h3>
+              <span class="chip chip-orange">14项</span>
+            </div>
+            <ul class="task-list">
+              <li>检查床头呼叫器状态</li>
+              <li>校准呼吸监测设备</li>
+              <li>更新环境传感器固件</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel-card table-panel">
+          <div class="panel-head">
+            <h3>设备清单</h3>
+            <button class="badge neutral">全部</button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>设备编号</th>
+                <th>名称</th>
+                <th>区域</th>
+                <th>状态</th>
+                <th>最近维护</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DEV-1021</td>
+                <td>血压计</td>
+                <td>北区护理室</td>
+                <td><span class="status ok">正常</span></td>
+                <td>2026-10-30</td>
+              </tr>
+              <tr>
+                <td>DEV-2034</td>
+                <td>跌倒检测器</td>
+                <td>西区走廊</td>
+                <td><span class="status pending">校准中</span></td>
+                <td>2026-10-29</td>
+              </tr>
+              <tr>
+                <td>DEV-3088</td>
+                <td>环境监测</td>
+                <td>南区楼层</td>
+                <td><span class="status ok">正常</span></td>
+                <td>2026-10-31</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

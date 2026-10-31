@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>服务工单中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item active" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">服务工单</div>
+              <h2 class="page-title">工单管理</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">新建工单</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">待处理</div>
+            <div class="stat-value">48</div>
+            <div class="stat-footer"><span class="up">▲ 6</span> 较昨日增加</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">处理中</div>
+            <div class="stat-value">19</div>
+            <div class="stat-footer"><span class="up">▲ 2</span> 整体效率提升</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">已完成</div>
+            <div class="stat-value">96</div>
+            <div class="stat-footer"><span class="up">▲ 11</span> 完成率优化</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">超时工单</div>
+            <div class="stat-value">3</div>
+            <div class="stat-footer"><span class="down">▼ 1</span> 低于上周</div>
+          </article>
+        </section>
+
+        <section class="panel-card table-panel">
+          <div class="panel-head">
+            <h3>工单列表</h3>
+            <div class="filter-group">
+              <button class="filter-btn active">全部</button>
+              <button class="filter-btn">待办</button>
+              <button class="filter-btn">已处理</button>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>工单编号</th>
+                <th>对象</th>
+                <th>类型</th>
+                <th>负责人</th>
+                <th>状态</th>
+                <th>时间</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SW-2048</td>
+                <td>张伯伯</td>
+                <td>健康体检</td>
+                <td>王护士</td>
+                <td><span class="status ok">已完成</span></td>
+                <td>09:30</td>
+              </tr>
+              <tr>
+                <td>#SW-2051</td>
+                <td>刘奶奶</td>
+                <td>送餐照护</td>
+                <td>李阿姨</td>
+                <td><span class="status processing">处理中</span></td>
+                <td>11:00</td>
+              </tr>
+              <tr>
+                <td>#SW-2056</td>
+                <td>陈大爷</td>
+                <td>门禁提醒</td>
+                <td>赵工</td>
+                <td><span class="status pending">待跟进</span></td>
+                <td>14:15</td>
+              </tr>
+              <tr>
+                <td>#SW-2061</td>
+                <td>吴阿姨</td>
+                <td>康复陪伴</td>
+                <td>孙医生</td>
+                <td><span class="status ok">已完成</span></td>
+                <td>16:40</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

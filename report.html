@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>报表统计</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="sidebar-overlay"></div>
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">智</div>
+          <div>
+            <div class="brand-name">智慧养老</div>
+            <div class="brand-sub">平台管理中心</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <div class="nav-group-title">总览</div>
+          <a class="nav-item" href="index.html"><span class="nav-icon">⌂</span><span>首页</span></a>
+          <a class="nav-item" href="elderly.html"><span class="nav-icon">◎</span><span>老人档案</span></a>
+          <a class="nav-item" href="health.html"><span class="nav-icon">▣</span><span>健康监测</span></a>
+          <a class="nav-item" href="service.html"><span class="nav-icon">⟡</span><span>服务工单</span></a>
+          <a class="nav-item" href="equipment.html"><span class="nav-icon">◫</span><span>设备管理</span></a>
+          <a class="nav-item" href="alarm.html"><span class="nav-icon">⚑</span><span>报警中心</span></a>
+          <a class="nav-item active" href="report.html"><span class="nav-icon">▤</span><span>报表统计</span></a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar page-header">
+          <div class="mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div>
+              <div class="eyebrow">报表统计</div>
+              <h2 class="page-title">经营分析</h2>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">导出报表</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card highlight">
+            <div class="stat-label">运营收入</div>
+            <div class="stat-value">¥286.4K</div>
+            <div class="stat-footer"><span class="up">▲ 12.7%</span> 较上月增长</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">服务时长</div>
+            <div class="stat-value">4,280h</div>
+            <div class="stat-footer"><span class="up">▲ 9.2%</span> 人工服务效率</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">满意度</div>
+            <div class="stat-value">96.5%</div>
+            <div class="stat-footer"><span class="up">▲ 2.1%</span> 客户反馈提升</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label">成本控制</div>
+            <div class="stat-value">82.4%</div>
+            <div class="stat-footer"><span class="up">▲ 3.6%</span> 合理预算</div>
+          </article>
+        </section>
+
+        <section class="detail-grid">
+          <div class="panel-card large-panel">
+            <div class="panel-head">
+              <h3>月度运营趋势</h3>
+              <span class="chip chip-blue">2026年</span>
+            </div>
+            <div class="chart line-chart">
+              <svg viewBox="0 0 680 200" preserveAspectRatio="none" aria-label="report chart">
+                <path d="M 0 160 C 90 150, 120 120, 170 130 S 260 90, 320 100 S 420 60, 500 70 S 590 50, 680 30" fill="none" stroke="#29b38e" stroke-width="4" stroke-linecap="round"/>
+                <path d="M 0 170 C 80 150, 120 110, 170 120 S 260 95, 330 90 S 430 55, 500 60 S 590 40, 680 35 L 680 200 L 0 200 Z" fill="rgba(41,179,142,0.08)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-head">
+              <h3>重点指标</h3>
+              <span class="chip chip-green">良好</span>
+            </div>
+            <div class="metric-stack">
+              <div class="metric-item"><span>护理覆盖率</span><strong>98.2%</strong></div>
+              <div class="metric-item"><span>住户维系率</span><strong>90.7%</strong></div>
+              <div class="metric-item"><span>恢复率</span><strong>83.6%</strong></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

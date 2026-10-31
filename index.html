@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="app-shell">
+      <div class="sidebar-overlay"></div>
       <aside class="sidebar">
         <div class="brand-wrap">
           <div class="brand-mark">智</div>
@@ -22,26 +23,34 @@
 
         <nav class="nav">
           <div class="nav-group-title">总览</div>
-          <button class="nav-item active">
+          <a class="nav-item active" href="index.html">
             <span class="nav-icon">⌂</span>
             <span>首页</span>
-          </button>
-          <button class="nav-item">
+          </a>
+          <a class="nav-item" href="elderly.html">
             <span class="nav-icon">◎</span>
             <span>老人档案</span>
-          </button>
-          <button class="nav-item">
+          </a>
+          <a class="nav-item" href="health.html">
             <span class="nav-icon">▣</span>
             <span>健康监测</span>
-          </button>
-          <button class="nav-item">
+          </a>
+          <a class="nav-item" href="service.html">
             <span class="nav-icon">⟡</span>
-            <span>照护服务</span>
-          </button>
-          <button class="nav-item">
+            <span>服务工单</span>
+          </a>
+          <a class="nav-item" href="equipment.html">
+            <span class="nav-icon">◫</span>
+            <span>设备管理</span>
+          </a>
+          <a class="nav-item" href="alarm.html">
             <span class="nav-icon">⚑</span>
-            <span>安全应急</span>
-          </button>
+            <span>报警中心</span>
+          </a>
+          <a class="nav-item" href="report.html">
+            <span class="nav-icon">▤</span>
+            <span>报表统计</span>
+          </a>
         </nav>
 
         <div class="mini-panel">
@@ -59,9 +68,12 @@
 
       <main class="main-content">
         <header class="topbar">
-          <div class="search-box">
-            <span>⌕</span>
-            <input type="text" value="搜索老人/服务工单/设备" aria-label="search" />
+          <div class="topbar-left mobile-row">
+            <button class="menu-toggle" aria-label="menu">☰</button>
+            <div class="search-box">
+              <span>⌕</span>
+              <input type="text" value="搜索老人/服务工单/设备" aria-label="search" />
+            </div>
           </div>
 
           <div class="topbar-actions">
@@ -145,9 +157,11 @@
                 <div class="card-title">健康监测</div>
                 <div class="card-subtitle">近7日趋势</div>
               </div>
-              <button class="filter-btn active">日</button>
-              <button class="filter-btn">周</button>
-              <button class="filter-btn">月</button>
+              <div class="filter-group">
+                <button class="filter-btn active">日</button>
+                <button class="filter-btn">周</button>
+                <button class="filter-btn">月</button>
+              </div>
             </div>
 
             <div class="chart" aria-label="health chart">
@@ -266,7 +280,7 @@
               <div class="device-item">
                 <div class="device-meta">
                   <span class="device-dot orange"></span>
-                  <span>跌倒检测器</span>
+                  <span>���倒检测器</span>
                 </div>
                 <span>校准中</span>
               </div>
