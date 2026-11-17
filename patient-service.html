@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f4f8fc" />
+    <title>照护服务 · 智慧养老</title><link rel="stylesheet" href="patient.css" />
+  </head>
+  <body class="patient-body">
+    <header class="patient-header"><a class="patient-brand" href="patient.html"><span class="patient-logo">智</span><span><strong>智慧养老</strong><small>患者服务中心</small></span></a><nav class="patient-nav" aria-label="患者导航"><a href="patient.html">首页</a><a href="patient-health.html">健康记录</a><a class="selected" href="patient-service.html">照护服务</a></nav><a class="management-link" href="index.html">管理端 ↗</a><a class="logout-link" href="login.html">退出</a></header>
+    <main class="patient-main">
+      <div class="page-intro"><span class="section-label">CARE & SUPPORT</span><h1>照护服务</h1><p>提交服务申请后，服务团队可在管理端工单列表查看并跟进。此原型使用本地演示数据。</p></div>
+      <section class="service-layout" id="appointments">
+        <article class="content-card"><div class="section-heading"><div><span class="section-label">NEW REQUEST</span><h2>预约服务</h2></div><span class="pill pill-blue">在线申请</span></div>
+          <form id="patient-service-form" class="form-grid"><label class="form-field">服务类型<select name="service" required><option value="健康随访">健康随访</option><option value="陪诊服务">陪诊服务</option><option value="康复陪伴">康复陪伴</option><option value="生活照护">生活照护</option><option value="用药咨询">用药咨询</option></select></label><label class="form-field">期望日期<input name="date" type="date" required /></label><label class="form-field">期望时段<select name="time" required><option value="上午 09:00-12:00">上午 09:00-12:00</option><option value="下午 13:00-17:00">下午 13:00-17:00</option><option value="时间待沟通">时间待沟通</option></select></label><label class="form-field">联系电话<input name="phone" type="tel" placeholder="请输入联系电话" pattern="[0-9+() -]{6,20}" required /></label><label class="form-field full">补充说明<textarea name="note" placeholder="请简要描述您的需求（选填）"></textarea></label><p class="form-note">提交后服务团队将联系您确认安排。紧急情况请勿使用此表单，请联系家人或拨打当地急救电话。</p><button class="button form-submit" type="submit">提交预约申请</button></form>
+        </article>
+        <aside class="content-card" id="orders"><div class="section-heading"><div><span class="section-label">MY REQUESTS</span><h2>我的服务工单</h2></div><span class="updated">最近服务</span></div><div class="order-list" id="patient-order-list"><article class="order-card"><div class="order-top"><strong>健康随访</strong><span class="pill pill-blue">已确认</span></div><p>服务人员将按预约时间联系您，了解近期健康情况。</p><div class="order-meta">工单 #SW-2048 · 今天 10:30 · 陈护士</div></article><article class="order-card"><div class="order-top"><strong>康复陪伴</strong><span class="pill pill-green">已完成</span></div><p>社区康复指导与日常活动陪伴。</p><div class="order-meta">工单 #SW-2031 · 11 月 12 日 · 孙医生</div></article><article class="order-card"><div class="order-top"><strong>用药咨询</strong><span class="pill pill-orange">待跟进</span></div><p>已收到您的咨询，服务团队将尽快与您联系。</p><div class="order-meta">工单 #SW-2026 · 11 月 10 日</div></article></div></aside>
+      </section>
+      <section class="help-panel" id="help"><span class="support-symbol">!</span><div><h3>紧急情况请优先求助</h3><p>本页面用于常规服务预约，并非急救通道。若有紧急不适，请立即联系家人或拨打当地急救电话。</p></div></section>
+      <footer class="patient-footer">提交的预约将作为演示工单同步显示在管理端服务工单页面</footer>
+    </main>
+    <nav class="mobile-bottom-nav" aria-label="移动端导航"><a href="patient.html">⌂<span>首页</span></a><a href="patient-health.html">♡<span>健康</span></a><a class="selected" href="patient-service.html">▦<span>服务</span></a><a href="index.html">▣<span>管理端</span></a></nav>
+    <script src="patient.js"></script>
+  </body>
+</html>

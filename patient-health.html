@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#f4f8fc" />
+    <title>健康档案 · 智慧养老</title><link rel="stylesheet" href="patient.css" />
+  </head>
+  <body class="patient-body">
+    <header class="patient-header"><a class="patient-brand" href="patient.html"><span class="patient-logo">智</span><span><strong>智慧养老</strong><small>患者服务中心</small></span></a><nav class="patient-nav" aria-label="患者导航"><a href="patient.html">首页</a><a class="selected" href="patient-health.html">健康记录</a><a href="patient-service.html">照护服务</a></nav><a class="management-link" href="index.html">管理端 ↗</a><a class="logout-link" href="login.html">退出</a></header>
+    <main class="patient-main">
+      <div class="page-intro"><span class="section-label">MY HEALTH</span><h1>健康档案</h1><p>集中查看近期健康指标与测量记录，方便您和服务团队了解日常变化。</p></div>
+      <section class="health-grid">
+        <article class="health-card"><span class="health-icon heart-icon">♡</span><span class="health-name">最近心率</span><strong>72 <small>次/分</small></strong><span class="health-status">● 正常范围</span><span class="card-caption">今天 08:30 · 最近一次记录</span></article>
+        <article class="health-card"><span class="health-icon pressure-icon">＋</span><span class="health-name">最近血压</span><strong>118<span class="slash">/</span>76 <small>mmHg</small></strong><span class="health-status">● 状态平稳</span><span class="card-caption">今天 08:25 · 最近一次记录</span></article>
+        <article class="health-card"><span class="health-icon sleep-icon">☾</span><span class="health-name">昨夜睡眠</span><strong>7.6 <small>小时</small></strong><span class="health-status">● 睡眠良好</span><span class="card-caption">今天 05:46 · 设备同步</span></article>
+      </section>
+      <section class="patient-section content-card"><div class="page-toolbar"><div><span class="section-label">TREND</span><h2 style="margin:5px 0 0;font-size:18px">近 7 日血压趋势</h2></div><div class="filter-tabs" role="group" aria-label="趋势时间范围"><button class="filter-tab active" data-range="7">近 7 天</button><button class="filter-tab" data-range="14">近 14 天</button><button class="filter-tab" data-range="30">近 30 天</button></div></div>
+        <div class="health-trend" aria-label="近七日血压记录柱状图"><div class="trend-column"><i style="height:48%"></i><span>周一</span></div><div class="trend-column"><i style="height:58%"></i><span>周二</span></div><div class="trend-column"><i style="height:52%"></i><span>周三</span></div><div class="trend-column"><i style="height:68%"></i><span>周四</span></div><div class="trend-column"><i style="height:61%"></i><span>周五</span></div><div class="trend-column"><i style="height:55%"></i><span>周六</span></div><div class="trend-column"><i style="height:64%"></i><span>今天</span></div></div>
+        <p class="health-disclaimer">图表为界面演示数据，用于展示记录趋势，不代表医疗诊断。若指标异常或身体不适，请及时联系医护人员。</p>
+      </section>
+      <section class="patient-section content-card"><div class="section-heading"><div><span class="section-label">RECENT MEASUREMENTS</span><h2>测量���录</h2></div><span class="updated">共 5 条 · 最近 7 天</span></div><div class="record-table-wrap"><table class="record-table"><thead><tr><th>日期时间</th><th>项目</th><th>记录结果</th><th>记录来源</th><th>状态</th></tr></thead><tbody><tr><td>今天 08:25</td><td>血压</td><td>118 / 76 mmHg</td><td>家用血压计</td><td class="reading-good">平稳</td></tr><tr><td>今天 08:30</td><td>心率</td><td>72 次/分</td><td>健康手环</td><td class="reading-good">正常</td></tr><tr><td>昨天 08:18</td><td>血压</td><td>121 / 78 mmHg</td><td>家用血压计</td><td class="reading-good">平稳</td></tr><tr><td>昨天 08:22</td><td>心率</td><td>75 次/分</td><td>健康手环</td><td class="reading-good">正常</td></tr><tr><td>周日 08:40</td><td>血压</td><td>119 / 77 mmHg</td><td>家用血压计</td><td class="reading-good">平稳</td></tr></tbody></table></div></section>
+      <section class="patient-section content-card"><div class="section-heading"><div><span class="section-label">DAILY CARE</span><h2>健康小贴士</h2></div></div><div class="quick-grid"><article class="quick-card"><span class="quick-icon blue-icon">♡</span><strong>规律测量</strong><small>尽量在每天相近时间、安静休息后测量并记录。</small></article><article class="quick-card"><span class="quick-icon green-icon">⌁</span><strong>持续活动</strong><small>根据自身情况安排适度活动，有需要时请家人陪同。</small></article><article class="quick-card"><span class="quick-icon violet-icon">☾</span><strong>关注睡眠</strong><small>保持规律作息；如长期睡眠不佳，建议咨询医护人员。</small></article></div></section>
+      <footer class="patient-footer">健康记录用于日常照护参考 · 演示数据仅供体验</footer>
+    </main>
+    <nav class="mobile-bottom-nav" aria-label="移动端导航"><a href="patient.html">⌂<span>首页</span></a><a class="selected" href="patient-health.html">♡<span>健康</span></a><a href="patient-service.html">▦<span>服务</span></a><a href="index.html">▣<span>管理端</span></a></nav>
+    <script src="patient.js"></script>
+  </body>
+</html>
