@@ -2,47 +2,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
   const filterButtons = document.querySelectorAll('.filter-btn');
   const menuToggle = document.querySelector('.menu-toggle');
-  const overlay = document.querySelector('.sidebar-overlay');
-  const body = document.body;
+  const sidebarOverlay = document.querySelector('.sidebar-overlay');
 
-  navItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      navItems.forEach((navItem) => navItem.classList.remove('active'));
-      item.classList.add('active');
-    });
+  // Keep the mobile navigation dismissible by both its toggle and the backdrop.
+  menuToggle?.addEventListener('click', () => {
+    document.body.classList.toggle('sidebar-open');
   });
 
+  sidebarOverlay?.addEventListener('click', () => {
+    document.body.classList.remove('sidebar-open');
+  });
+
+  // Tabs are scoped to their nearest filter group so unrelated controls stay selected.
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const group = button.closest('.filter-group');
-      (group || document).querySelectorAll('.filter-btn').forEach((item) => item.classList.remove('active'));
+      const buttons = group ? group.querySelectorAll('.filter-btn') : filterButtons;
+      buttons.forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
     });
   });
 
-  if (menuToggle) menuToggle.addEventListener('click', () => body.classList.toggle('sidebar-open'));
-  if (overlay) overlay.addEventListener('click', () => body.classList.remove('sidebar-open'));
-
+  // Animate dashboard bars only on pages that contain a chart.
   document.querySelectorAll('.bar').forEach((bar, index) => {
-    const originalHeight = bar.style.height;
+    const targetHeight = bar.style.height;
+    if (!targetHeight) return;
+
     bar.style.height = '20%';
-    requestAnimationFrame(() => setTimeout(() => {
-      bar.style.transition = 'height 0.5s ease';
-      bar.style.height = originalHeight;
-    }, 100 * index));
+    requestAnimationFrame(() => {
+      window.setTimeout(() => {
+        bar.style.transition = 'height 0.5s ease';
+        bar.style.height = targetHeight;
+      }, 100 * index);
+    });
   });
 
   let selectedRole = 'patient';
   const roleOptions = document.querySelectorAll('.role-option');
   const loginHint = document.querySelector('#login-hint');
+
   roleOptions.forEach((option) => {
     option.addEventListener('click', () => {
-      selectedRole = option.dataset.role;
+      selectedRole = option.dataset.role === 'admin' ? 'admin' : 'patient';
+
       roleOptions.forEach((item) => {
-        const active = item === option;
-        item.classList.toggle('active', active);
-        item.setAttribute('aria-pressed', String(active));
+        const isActive = item === option;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-pressed', String(isActive));
       });
+
       if (loginHint) {
         loginHint.textContent = selectedRole === 'admin'
           ? '管理者登录后可进入机构运营与服务管理后台。'
@@ -52,23 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const loginForm = document.querySelector('#login-form');
-  if (loginForm) {
-    loginForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const destination = selectedRole === 'admin' ? 'index.html' : 'patient.html';
-      window.location.href = destination;
-    });
-  }
+  loginForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    window.location.href = selectedRole === 'admin' ? 'index.html' : 'patient.html';
+  });
+
+  const patientActionMessages = {
+    appointment: '预约功能为演示原型，请联系您的服务中心确认预约。',
+    help: '这是演示求助入口。真实紧急情况请立即拨打当地急救电话。',
+    medication: '请按医生或药师的医嘱用药；本页面提醒仅供演示。',
+  };
 
   document.querySelectorAll('[data-patient-action]').forEach((button) => {
     button.addEventListener('click', () => {
       const action = button.dataset.patientAction;
-      const messages = {
-        appointment: '预约功能为演示原型，请联系您的服务中心确认预约。',
-        help: '已展示求助入口。真实紧急情况请立即拨打当地急救电话。',
-        medication: '已记录您查看了用药提醒，请按医生或药师的医嘱用药。',
-      };
-      window.alert(messages[action] || '该功能为演示原型。');
+      window.alert(patientActionMessages[action] || '该功能为演示原型。');
     });
   });
 });

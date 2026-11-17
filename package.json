@@ -1,0 +1,18 @@
+{
+  "name": "smart-eldercare-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive static web prototype for eldercare administration and patient services",
+  "scripts": {
+    "dev": "http-server . -p 8000 -c-1",
+    "format": "prettier --write \"*.html\" \"*.css\" \"*.js\" \"*.md\" \"*.json\"",
+    "format:check": "prettier --check \"*.html\" \"*.css\" \"*.js\" \"*.md\" \"*.json\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
