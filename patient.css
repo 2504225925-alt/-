@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif; color: #203047; font-synthesis: none; }
+body.patient-body { margin: 0; min-height: 100vh; background: #f4f8fc; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+.patient-header { position: sticky; top: 0; z-index: 3; height: 72px; display: flex; align-items: center; gap: 46px; padding: 0 max(5vw, calc((100vw - 1180px)/2)); background: rgba(255,255,255,.94); border-bottom: 1px solid #e8eef5; backdrop-filter: blur(12px); }
+.patient-brand { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
+.patient-logo { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(145deg,#65bdff,#267fe5); color: white; font-weight: 800; }
+.patient-brand strong,.patient-brand small { display: block; }
+.patient-brand strong { font-size: 15px; }
+.patient-brand small { margin-top: 3px; color: #8a97a7; font-size: 11px; }
+.patient-nav { height: 100%; display: flex; align-items: center; gap: 30px; flex: 1; }
+.patient-nav a { height: 100%; display: flex; align-items: center; position: relative; color: #78869a; font-size: 14px; }
+.patient-nav a.selected { color: #287fd5; font-weight: 700; }
+.patient-nav a.selected::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; border-radius: 3px 3px 0 0; background: #328fe8; }
+.logout-link { color: #77869a; font-size: 13px; }
+.patient-main { width: min(1120px, calc(100% - 40px)); margin: 32px auto 70px; }
+.welcome-card { min-height: 210px; padding: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 22px; color: white; background: linear-gradient(112deg,#277ed7 0%,#398fe1 52%,#59b9c9 100%); box-shadow: 0 16px 36px rgba(48,130,202,.18); position: relative; overflow: hidden; }
+.welcome-card::after { content: ""; position: absolute; width: 300px; height: 300px; right: 10%; top: -170px; border: 1px solid rgba(255,255,255,.17); border-radius: 50%; box-shadow: 0 0 0 36px rgba(255,255,255,.045), 0 0 0 74px rgba(255,255,255,.035); }
+.welcome-card > * { position: relative; z-index: 1; }
+.welcome-kicker { color: rgba(255,255,255,.78); font-size: 13px; }
+.welcome-card h1 { margin: 10px 0; font-size: clamp(26px,4vw,36px); letter-spacing: -.04em; }
+.welcome-card p { margin: 0; max-width: 620px; color: rgba(255,255,255,.84); font-size: 14px; line-height: 1.8; }
+.welcome-date { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; padding: 11px 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; background: rgba(255,255,255,.12); font-size: 12px; }
+.online-dot { width: 8px; height: 8px; border-radius: 50%; background: #a7f2ce; box-shadow: 0 0 0 4px rgba(167,242,206,.16); }
+.patient-section { margin-top: 32px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 17px; }
+.section-label { color: #8b9bb1; font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+.section-heading h2 { margin: 5px 0 0; color: #26364d; font-size: 21px; letter-spacing: -.03em; }
+.updated { color: #95a1b0; font-size: 12px; }
+.health-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.health-card { min-height: 176px; padding: 20px 22px; display: grid; grid-template-columns: 38px 1fr; align-content: start; column-gap: 12px; border: 1px solid #e8eef5; border-radius: 17px; background: white; box-shadow: 0 7px 22px rgba(47,74,108,.035); }
+.health-icon { grid-row: span 2; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: #edf6ff; color: #398fe4; font-size: 20px; }
+.pressure-card .health-icon { background: #fff2ef; color: #ed8b72; }
+.sleep-card .health-icon { background: #f1efff; color: #8375d8; }
+.health-name { align-self: center; color: #75849a; font-size: 13px; }
+.health-card strong { grid-column: 2; margin-top: 17px; color: #26364d; font-size: 28px; letter-spacing: -.04em; }
+.health-card strong small { color: #8a97a7; font-size: 12px; font-weight: 500; letter-spacing: 0; }
+.health-card .slash { color: #9aa6b5; font-size: 18px; font-weight: 400; }
+.health-status { grid-column: 2; margin-top: 6px; color: #54a78b; font-size: 11px; }
+.health-note { margin: 11px 2px 0; color: #99a5b3; font-size: 11px; }
+.text-action { border: 0; padding: 7px 0; color: #3288df; background: transparent; font-size: 13px; cursor: pointer; }
+.care-grid { display: grid; grid-template-columns: .95fr 1.3fr; gap: 16px; }
+.appointment-card,.reminder-card { padding: 21px 23px; border: 1px solid #e8eef5; border-radius: 17px; background: white; box-shadow: 0 7px 22px rgba(47,74,108,.035); }
+.appointment-top { display: flex; justify-content: space-between; align-items: center; }
+.appointment-icon,.reminder-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: #398fe4; background: #edf6ff; font-size: 19px; }
+.pill { padding: 6px 10px; border-radius: 999px; font-size: 11px; }
+.pill-blue { color: #3184d6; background: #edf6ff; }
+.appointment-label { display: block; margin-top: 17px; color: #8996a8; font-size: 12px; }
+.appointment-card h3 { margin: 5px 0; font-size: 19px; }
+.appointment-card p { margin: 0; color: #5385b4; font-size: 13px; }
+.care-divider { height: 1px; margin: 17px 0; background: #edf0f4; }
+.staff-row { display: flex; align-items: center; gap: 10px; }
+.staff-avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: #527aaf; background: #eaf2fc; font-weight: 700; }
+.staff-row strong,.staff-row small { display: block; }
+.staff-row strong { font-size: 12px; }
+.staff-row small { margin-top: 3px; color: #9aa5b3; font-size: 10px; }
+.staff-contact { margin-left: auto; color: #97a3b2; font-size: 11px; }
+.reminder-title { display: flex; align-items: center; gap: 11px; margin-bottom: 13px; }
+.reminder-icon { color: #cf9a43; background: #fff6e8; }
+.reminder-title h3 { margin: 0; font-size: 16px; }
+.reminder-title p { margin: 4px 0 0; color: #95a1b0; font-size: 11px; }
+.reminder-item { width: 100%; display: flex; align-items: center; gap: 11px; padding: 12px 0; text-align: left; border: 0; border-top: 1px solid #f0f2f5; background: white; cursor: pointer; }
+.reminder-item strong,.reminder-item small { display: block; }
+.reminder-item strong { color: #46566c; font-size: 12px; }
+.reminder-item small { margin-top: 4px; color: #9aa5b3; font-size: 10px; }
+.reminder-check { flex: 0 0 25px; width: 25px; height: 25px; display: grid; place-items: center; border-radius: 50%; color: white; background: #56b79b; font-size: 13px; }
+.reminder-check.soft { color: #e6978c; background: #fff0ed; }
+.chevron { margin-left: auto; color: #9ca8b6; font-size: 20px; }
+.static-reminder { cursor: default; }
+.support-strip { display: flex; align-items: center; gap: 15px; margin-top: 25px; padding: 18px 21px; border: 1px solid #e5edf5; border-radius: 16px; background: #f9fbfe; }
+.support-symbol { flex: 0 0 36px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; color: #398fe4; background: #eaf4ff; font-weight: 800; }
+.support-strip h2 { margin: 0; font-size: 14px; }
+.support-strip p { margin: 5px 0 0; color: #8996a8; font-size: 11px; line-height: 1.6; }
+.help-button { margin-left: auto; flex: 0 0 auto; border: 1px solid #cfe2f8; border-radius: 9px; padding: 9px 13px; color: #3288df; background: #fff; font-size: 12px; cursor: pointer; }
+.patient-footer { padding: 28px 0 10px; color: #a4afbc; font-size: 11px; text-align: center; }
+.mobile-bottom-nav { display: none; }
+
+@media (max-width: 720px) {
+  .patient-header { height: 62px; justify-content: space-between; gap: 12px; padding: 0 18px; }
+  .patient-nav { display: none; }
+  .patient-main { width: min(100% - 28px, 560px); margin: 18px auto 90px; }
+  .welcome-card { min-height: 0; padding: 25px 22px; align-items: flex-start; flex-direction: column; gap: 16px; border-radius: 18px; }
+  .welcome-card h1 { font-size: 27px; }
+  .welcome-card p { font-size: 13px; }
+  .welcome-date { font-size: 11px; }
+  .patient-section { margin-top: 25px; }
+  .section-heading h2 { font-size: 19px; }
+  .updated { max-width: 120px; text-align: right; font-size: 10px; }
+  .health-grid { grid-template-columns: 1fr; gap: 10px; }
+  .health-card { min-height: 0; padding: 15px 17px; grid-template-columns: 38px 1fr; }
+  .health-card strong { margin-top: 9px; font-size: 25px; }
+  .health-status { margin-top: 4px; }
+  .care-grid { grid-template-columns: 1fr; gap: 11px; }
+  .support-strip { align-items: flex-start; flex-wrap: wrap; padding: 16px; }
+  .support-strip > div:nth-child(2) { flex: 1; min-width: 180px; }
+  .help-button { margin-left: 51px; }
+  .mobile-bottom-nav { position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4,1fr); padding: 8px 6px calc(8px + env(safe-area-inset-bottom)); border-top: 1px solid #e8eef5; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); }
+  .mobile-bottom-nav a { display: grid; justify-items: center; gap: 3px; color: #8b98a9; font-size: 17px; }
+  .mobile-bottom-nav a span { font-size: 10px; }
+  .mobile-bottom-nav a.selected { color: #3288df; }
+}

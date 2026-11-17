@@ -3,57 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>智慧养老平台登录</title>
+    <meta name="theme-color" content="#f2f7ff" />
+    <title>智慧养老服务平台 · 登录</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="login.css" />
   </head>
   <body class="login-body">
-    <div class="login-shell">
-      <div class="login-page">
-        <div class="login-copy-panel">
-          <div class="login-brand">
-            <div class="brand-mark">智</div>
-            <div>
-              <div class="brand-name">智慧养老</div>
-              <div class="brand-sub">平台管理中心</div>
-            </div>
-          </div>
+    <main class="login-layout">
+      <section class="login-card" aria-labelledby="login-title">
+        <a class="login-brand" href="login.html" aria-label="智慧养老首页">
+          <span class="brand-mark" aria-hidden="true">智</span>
+          <span class="brand-copy"><strong>智慧养老</strong><small>健康照护服务平台</small></span>
+        </a>
 
-          <div class="eyebrow">智能服务管理系统</div>
-          <h1>让健康照护更高效、更安全</h1>
-          <p>连接老人档案、健康数据、设备状态与服务工单的全场景管理平台。</p>
+        <div class="login-intro">
+          <span class="eyebrow">WELCOME</span>
+          <h1 id="login-title">欢迎回来</h1>
+          <p>登录后继续使用您的专属服务</p>
         </div>
 
-        <div class="login-card">
-          <div class="login-header">
-            <h2>欢迎登录</h2>
-            <span>账号中心</span>
+        <div class="role-switch" role="group" aria-label="选择登录身份">
+          <button type="button" class="role-option active" data-role="patient" aria-pressed="true">患者 / 家属</button>
+          <button type="button" class="role-option" data-role="admin" aria-pressed="false">管理者</button>
+        </div>
+
+        <form class="login-form" id="login-form">
+          <label class="field">
+            <span>手机号或账号</span>
+            <input id="account" name="account" type="text" autocomplete="username" placeholder="请输入手机号或账号" required />
+          </label>
+          <label class="field">
+            <span>密码</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" required />
+          </label>
+
+          <div class="login-meta">
+            <label class="remember-me"><input type="checkbox" name="remember" /> <span>记住我</span></label>
+            <a href="mailto:support@example.com?subject=%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE">忘记密码？</a>
           </div>
 
-          <form class="login-form">
-            <label class="field">
-              <span>用户名</span>
-              <input type="text" value="admin" />
-            </label>
-
-            <label class="field">
-              <span>密码</span>
-              <input type="password" value="123456" />
-            </label>
-
-            <div class="login-meta">
-              <label class="remember-me"><input type="checkbox" checked /> 记住我</label>
-              <a href="#">忘记密码？</a>
-            </div>
-
-            <button type="submit" class="primary-btn login-btn">登录系统</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
+          <button type="submit" class="login-submit">登录</button>
+          <p class="login-hint" id="login-hint">患者与家属登录后可查看健康记录、预约和照护提醒。</p>
+        </form>
+        <footer class="login-footer">守护健康，从贴心照护开始</footer>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

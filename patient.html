@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f8fc" />
+    <title>我的健康与照护 · 智慧养老</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="patient.css" />
+  </head>
+  <body class="patient-body">
+    <header class="patient-header">
+      <a class="patient-brand" href="patient.html"><span class="patient-logo">智</span><span><strong>智慧养老</strong><small>我的健康服务</small></span></a>
+      <nav class="patient-nav" aria-label="患者导航">
+        <a class="selected" href="#overview">首页</a>
+        <a href="#health">健康记录</a>
+        <a href="#care">照护服务</a>
+      </nav>
+      <a class="logout-link" href="login.html">退出</a>
+    </header>
+
+    <main class="patient-main">
+      <section class="welcome-card" id="overview">
+        <div>
+          <span class="welcome-kicker">今天也要好好照顾自己</span>
+          <h1>早上好，王阿姨 <span aria-hidden="true">☀️</span></h1>
+          <p>您的健康和照护服务都在这里，随时查看，有需要我们就在身边。</p>
+        </div>
+        <div class="welcome-date"><span class="online-dot"></span> 今日服务正常</div>
+      </section>
+
+      <section class="patient-section" id="health">
+        <div class="section-heading"><div><span class="section-label">HEALTH</span><h2>我的健康</h2></div><span class="updated">最近更新：今天 08:30</span></div>
+        <div class="health-grid">
+          <article class="health-card heart-card"><span class="health-icon">♡</span><span class="health-name">心率</span><strong>72 <small>次/分</small></strong><span class="health-status">在正常范围</span></article>
+          <article class="health-card pressure-card"><span class="health-icon">＋</span><span class="health-name">血压</span><strong>118<span class="slash">/</span>76 <small>mmHg</small></strong><span class="health-status">最近测量：今天</span></article>
+          <article class="health-card sleep-card"><span class="health-icon">☾</span><span class="health-name">昨夜睡眠</span><strong>7.6 <small>小时</small></strong><span class="health-status">睡眠情况良好</span></article>
+        </div>
+        <p class="health-note">健康数据仅供日常记录参考，如有不适请咨询医护人员。</p>
+      </section>
+
+      <section class="patient-section" id="care">
+        <div class="section-heading"><div><span class="section-label">CARE & SUPPORT</span><h2>今天的安排</h2></div><button class="text-action" data-patient-action="appointment">查看预约 ›</button></div>
+        <div class="care-grid">
+          <article class="appointment-card">
+            <div class="appointment-top"><span class="appointment-icon">▦</span><span class="pill pill-blue">已确认</span></div>
+            <span class="appointment-label">下一次服务</span>
+            <h3>健康随访</h3>
+            <p>今天 · 上午 10:30</p>
+            <div class="care-divider"></div>
+            <div class="staff-row"><span class="staff-avatar">陈</span><span><strong>陈护士</strong><small>社区护理人员</small></span><span class="staff-contact">服务人员</span></div>
+          </article>
+          <article class="reminder-card">
+            <div class="reminder-title"><span class="reminder-icon">◷</span><div><h3>贴心提醒</h3><p>为您准备的今日小提醒</p></div></div>
+            <button class="reminder-item" data-patient-action="medication"><span class="reminder-check">✓</span><span><strong>记得记录晨间健康数据</strong><small>建议在休息后测量并记录</small></span><span class="chevron">›</span></button>
+            <div class="reminder-item static-reminder"><span class="reminder-check soft">♡</span><span><strong>今天安排了健康随访</strong><small>服务人员将按预约时间联系您</small></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="support-strip">
+        <div class="support-symbol">?</div>
+        <div><h2>需要帮助吗？</h2><p>遇到问题可以联系服务中心；如遇紧急情况，请立即联系家人或拨打当地急救电话。</p></div>
+        <button class="help-button" data-patient-action="help">联系服务中心</button>
+      </section>
+      <footer class="patient-footer">智慧养老服务平台 · 关怀每一天</footer>
+    </main>
+
+    <nav class="mobile-bottom-nav" aria-label="移动端导航"><a class="selected" href="#overview">⌂<span>首页</span></a><a href="#health">♡<span>健康</span></a><a href="#care">▦<span>服务</span></a><a href="login.html">☻<span>我的</span></a></nav>
+    <script src="script.js"></script>
+  </body>
+</html>
