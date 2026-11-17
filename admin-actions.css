@@ -1,0 +1,143 @@
+/* Admin action dialogs and feedback */
+.admin-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(15, 30, 48, 0.46);
+  backdrop-filter: blur(3px);
+}
+
+.admin-dialog {
+  position: relative;
+  width: min(100%, 460px);
+  max-height: min(90vh, 720px);
+  overflow: auto;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(13, 35, 61, 0.24);
+}
+
+.admin-dialog h2 {
+  margin: 0 36px 20px 0;
+  color: #1c2b3c;
+  font-size: 1.35rem;
+}
+
+.admin-dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: #f2f6fa;
+  color: #53647a;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.admin-dialog-body > p {
+  margin: 0 0 12px;
+  color: #52647a;
+  line-height: 1.7;
+}
+
+.dialog-field {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0;
+  color: #52647a;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.dialog-field input,
+.dialog-field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+  background: #fbfdff;
+  color: #24364b;
+  font: inherit;
+}
+
+.dialog-field input:focus,
+.dialog-field select:focus {
+  border-color: #58a4ee;
+  outline: 3px solid rgba(45, 136, 226, 0.12);
+}
+
+.admin-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.admin-dialog-actions button {
+  min-height: 42px;
+}
+
+.action-list {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: #52647a;
+  line-height: 1.9;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.quick-links a {
+  padding: 9px 13px;
+  border-radius: 10px;
+  background: #edf6ff;
+  color: #1768b7;
+  font-weight: 600;
+}
+
+.muted-copy {
+  color: #8896a8 !important;
+  font-size: 0.86rem;
+}
+
+.admin-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 13px 18px;
+  border-radius: 12px;
+  background: #18334c;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(15, 35, 57, 0.22);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.admin-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 520px) {
+  .admin-dialog { padding: 24px 18px; }
+  .admin-dialog-actions { flex-direction: column-reverse; }
+  .admin-dialog-actions button { width: 100%; }
+  .admin-toast { right: 16px; bottom: 16px; }
+}
